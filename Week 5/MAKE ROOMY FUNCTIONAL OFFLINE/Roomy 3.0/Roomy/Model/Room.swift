@@ -8,17 +8,13 @@
 
 import Foundation
 import RealmSwift
-
 //
 // MARK: - Room
 //
-
 class Room: Object, Codable {
-    
     //
     // MARK: - Variables And Properties
     //
-    
     @objc dynamic var id: Int = 0
     @objc dynamic var title: String = ""
     @objc dynamic var price: String = ""

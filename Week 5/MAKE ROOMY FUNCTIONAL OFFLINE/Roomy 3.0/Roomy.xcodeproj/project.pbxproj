@@ -118,8 +118,8 @@
 				608CFCC02449CE0F00EBBCFD /* SignInViewController.swift */,
 				6047DE4E24552BA40032EF7F /* SignUpViewController.swift */,
 				608CFCBC2449CDBF00EBBCFD /* HomeTableViewController.swift */,
-				608CFCBE2449CDD300EBBCFD /* ListingViewController.swift */,
 				60ED2DC324591D0900450785 /* AddRoomViewController.swift */,
+				608CFCBE2449CDD300EBBCFD /* ListingViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";

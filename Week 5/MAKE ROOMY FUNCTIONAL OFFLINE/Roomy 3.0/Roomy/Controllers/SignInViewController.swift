@@ -8,17 +8,13 @@
 
 import UIKit
 import Alamofire
-
 //
 // MARK: - SignInViewController
 //
-
 class SignInViewController: UIViewController {
-    
     //
     // MARK: - IBOutlets
     //
-    
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
     
@@ -27,11 +23,9 @@ class SignInViewController: UIViewController {
         super.viewDidLoad()
         
     }
-    
     //
     // MARK: - IBActions
     //
-    
     @IBAction func signIn(_ sender: Any) {
         let email = self.email.text!
         let password = self.password.text!

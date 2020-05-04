@@ -8,22 +8,20 @@
 
 import Foundation
 import Alamofire
-
 //
 // MARK: - Router
 //
-
 enum Router: URLRequestConvertible {
-
+    //
+    // MARK: - case
+    //
         case signIn(email:String,password:String)
         case signUp(name: String, email: String, password: String)
         case getRooms
         case addRoom(title:String,place:String,price:String,description:String?,image:UIImage?)
-    
         //
         // MARK: - url
         //
-    
         var url : URL {
             switch self {
             case .signIn:
@@ -37,11 +35,9 @@ enum Router: URLRequestConvertible {
             }
             
         }
-    
     //
     // MARK: - method
     //
-    
         var method : HTTPMethod {
             switch self {
             case .signIn:
@@ -54,11 +50,9 @@ enum Router: URLRequestConvertible {
                 return.post
             }
         }
-    
     //
     // MARK: - parameters
     //
-    
         var parameters : [String:Any]{
             switch self {
             case .signIn(let email,let password):
@@ -81,18 +75,11 @@ enum Router: URLRequestConvertible {
             
         }
     
-    // Authorization Code
-    // This is to save the Authorization Code in the user defaults.
-    
-    struct Code {
-        static var authorizationCode = UserDefaults.standard.object(forKey: "auth_token") as? String
-    }
-    
 
         func asURLRequest() throws -> URLRequest {
             var urlRequest = URLRequest(url: url)
             urlRequest.method = method
-            urlRequest.setValue(Code.authorizationCode, forHTTPHeaderField: "Authorization")
+            urlRequest.setValue(User.authorizationCode, forHTTPHeaderField: "Authorization")
             return try URLEncoding.default.encode(urlRequest, with: parameters)
             
             

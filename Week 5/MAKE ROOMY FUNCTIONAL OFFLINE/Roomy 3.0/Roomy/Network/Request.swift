@@ -9,17 +9,13 @@
 import Foundation
 import Alamofire
 import RealmSwift
-
 //
 // MARK:- Network Requests
 //
-
 class Request {
-    
     //
     // MARK:- SignIn Request Function
     //
-    
     static func signIn(email: String, password: String, _ completionHandler: @escaping (Result<User, Error>) -> Void) {
         
         AF.request(Router.signIn(email: email, password: password)).responseData { (response: AFDataResponse<Data>) in
@@ -31,7 +27,7 @@ class Request {
 
                     let authorizationCode = user.authorization
                     UserDefaults.standard.setValue(authorizationCode, forKey: "auth_token")
-                    Router.Code.authorizationCode = authorizationCode
+                    User.authorizationCode = authorizationCode
                     
                 } catch let error {
                     completionHandler(.failure(error))
@@ -42,12 +38,9 @@ class Request {
         }
         
     }
-    
-    
     //
     // MARK:- SignUp Request Function
     //
-    
     static func signUp(name: String, email: String, password: String, _ completionHandler: @escaping (Result<User, Error>) -> Void) {
         
         AF.request(Router.signUp(name: name, email: email, password: password)).responseData { (response: AFDataResponse<Data>) in
@@ -59,7 +52,7 @@ class Request {
                     
                     let authorizationCode = user.authorization
                     UserDefaults.standard.setValue(authorizationCode, forKey: "auth_token")
-                    Router.Code.authorizationCode = authorizationCode
+                    User.authorizationCode = authorizationCode
                     
                 } catch let error {
                     completionHandler(.failure(error))
@@ -70,11 +63,9 @@ class Request {
         }
         
     }
-    
     //
     // MARK:- AddRoom Request Function
-    // 
-    
+    //
     static func addRoom(title: String, place: String, price: String, description: String?, image: UIImage?, _ completionHandler: @escaping (Result<Bool, Error>) -> Void) {
         AF.request(Router.addRoom(title: title, place: place, price: price, description: description, image: image)).responseData { (response: AFDataResponse<Data>) in
             switch response.result {
@@ -86,11 +77,9 @@ class Request {
         }
         
     }
-    
     //
     // MARK:- GetRooms Request Function
-    // 
-    
+    //
     static func getRooms(_ completionHandler: @escaping (Result<[Room], Error>) -> Void) {
         
         AF.request(Router.getRooms).responseData { (response: AFDataResponse<Data>) in

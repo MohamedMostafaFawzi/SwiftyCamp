@@ -9,24 +9,18 @@
 import UIKit
 import Alamofire
 import Kingfisher
-
 //
 // MARK: - ListingViewController
 //
-
 class ListingViewController: UIViewController {
-    
     //
     // MARK: - Variables And Properties
     //
-    
     var descriptionListing : String?
     var imageListing : String?
-    
     //
     // MARK: - IBOutlets
     //
-    
     @IBOutlet weak var roomMainImage: UIImageView!
     @IBOutlet weak var descriptionText: UITextView!
     

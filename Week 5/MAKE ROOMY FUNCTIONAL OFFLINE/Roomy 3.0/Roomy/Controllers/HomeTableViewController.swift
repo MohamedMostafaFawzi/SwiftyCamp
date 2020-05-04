@@ -9,17 +9,13 @@
 import UIKit
 import Alamofire
 import RealmSwift
-
 //
 // MARK: - HomeTableViewController
 //
-
 class HomeTableViewController: UIViewController {
-    
     //
     // MARK: - IBOutlets
     //
-    
     @IBOutlet weak var roomsTableView: UITableView!
     
     var rooms = [Room]()
@@ -52,11 +48,9 @@ class HomeTableViewController: UIViewController {
 
 
 }
-
 //
 // MARK: - UITableViewDataSource
 //
-
 extension HomeTableViewController: UITableViewDataSource {
     
     
@@ -79,11 +73,9 @@ extension HomeTableViewController: UITableViewDataSource {
     
     
 }
-
 //
 // MARK: - UITableViewDelegate
 //
-
 extension HomeTableViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -95,8 +87,9 @@ extension HomeTableViewController: UITableViewDelegate {
     }
     
 }
-
-
+//
+// MARK: - registerCustomCells
+//
 extension HomeTableViewController {
 
 func registerCustomCells() {

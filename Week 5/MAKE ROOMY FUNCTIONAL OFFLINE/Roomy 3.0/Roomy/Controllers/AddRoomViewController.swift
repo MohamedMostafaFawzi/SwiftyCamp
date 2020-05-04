@@ -7,17 +7,13 @@
 //
 
 import UIKit
-
 //
 // MARK: - AddRoomViewController
 //
-
 class AddRoomViewController: UIViewController {
-    
     //
     // MARK: - IBOutlets
     //
-    
     @IBOutlet weak var roomTitle: UITextField!
     @IBOutlet weak var roomPlace: UITextField!
     @IBOutlet weak var roomPrice: UITextField!
@@ -37,11 +33,9 @@ class AddRoomViewController: UIViewController {
         
 
     }
-    
     //
     // MARK: - IBAction
     //
-    
     @IBAction func chooseImage(_ sender: Any) {
         let picker = UIImagePickerController()
         picker.allowsEditing = true
@@ -74,9 +68,9 @@ class AddRoomViewController: UIViewController {
     }
 
 }
-
-
-
+//
+// MARK: - UIImagePickerControllerDelegate, UINavigationControllerDelegate
+//
 extension AddRoomViewController : UIImagePickerControllerDelegate , UINavigationControllerDelegate {
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)

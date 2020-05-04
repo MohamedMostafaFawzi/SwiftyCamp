@@ -7,7 +7,6 @@
 //
 
 import Foundation
-
 //
 // MARK: - User
 //
@@ -28,4 +27,10 @@ struct User: Codable {
         case authorizationPrivate = "auth_token"
     }
     
+}
+//
+// MARK: - Authorization Code
+//
+extension User {
+    static var authorizationCode = UserDefaults.standard.object(forKey: "auth_token") as? String
 }
