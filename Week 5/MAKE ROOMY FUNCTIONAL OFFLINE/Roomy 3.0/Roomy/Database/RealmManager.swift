@@ -10,7 +10,7 @@ import Foundation
 import RealmSwift
 
 
-class RealmManger{
+class RealmManager{
     
     private static let realm = try! Realm()
     static func saveRooms(rooms:[Room]){

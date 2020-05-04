@@ -33,8 +33,8 @@ class ListingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        descriptionText.text = description
-        roomMainImage.kf.setImage(with: URL(string: imageListing ?? "https://www.narrowpathwinery.com/assets/images/products/large/no-user-Image.png"))
+        descriptionText.text = descriptionListing
+        roomMainImage.kf.setImage(with: URL(string: imageListing ?? ""))
 
     }
     

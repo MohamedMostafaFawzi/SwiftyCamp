@@ -81,8 +81,7 @@ enum Router: URLRequestConvertible {
             
         }
     
-    //
-    // MARK: - Authorization Code
+    // Authorization Code
     // This is to save the Authorization Code in the user defaults.
     
     struct Code {
