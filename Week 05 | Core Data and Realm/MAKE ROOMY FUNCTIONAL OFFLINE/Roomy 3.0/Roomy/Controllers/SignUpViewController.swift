@@ -8,10 +8,11 @@
 
 import UIKit
 import Alamofire
+import NVActivityIndicatorView
 //
 // MARK: - SignUpViewController
 //
-class SignUpViewController: UIViewController {
+class SignUpViewController: UIViewController, NVActivityIndicatorViewable {
     //
     // MARK: - IBOutlets
     //
@@ -28,11 +29,13 @@ class SignUpViewController: UIViewController {
     // MARK: - IBActions
     //
     @IBAction func signUp(_ sender: Any) {
+        startAnimating()
         let name = self.name.text!
         let email = self.email.text!
         let password = self.password.text!
         
         APIClient.signUp(name: name, email: email, password: password) { (result) in
+            self.stopAnimating()
             switch result {
                 
             case .success(let success):
