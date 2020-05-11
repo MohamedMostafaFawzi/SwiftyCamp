@@ -27,19 +27,26 @@ class SignInViewController: UIViewController {
     // MARK: - IBActions
     //
     @IBAction func signIn(_ sender: Any) {
+        
         let email = self.email.text!
         let password = self.password.text!
         
-        
-        Request.signIn(email: email, password: password) { (result) in
+        APIClient.signIn(email: email, password: password) { (result) in
             switch result {
-            case .success:
-                // Connect it with the HomeTableViewController
-                let HomeTableViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "HomeTableViewController" ) as! HomeTableViewController
-                self.navigationController?.pushViewController(HomeTableViewController, animated: true)
+                
+            case .success(let success):
+                if success {
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let homeTableView = storyboard.instantiateViewController(identifier: "HomeTableViewController") as! HomeTableViewController
+                homeTableView.modalPresentationStyle = .automatic
+                self.present(homeTableView, animated: true, completion: nil)
+                }else{
+                    self.showAlert(title: "Sign In Failed", message: "Please check the email and password and try again.")
+                }
                 
             case .failure(let error):
                 print(error.localizedDescription)
+                self.showAlert(title: "Sign In Failed", message: "Please check the email and password and try again.")
                 
             }
             
