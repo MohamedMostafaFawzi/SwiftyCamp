@@ -1,30 +1,37 @@
-# SwiftyCamp
+# SwiftyCamp iOS Bootcamp
+
+
 The SwiftyCamp 12 weeks bootcamp in iOS development tasks and projects.
 
+
+
 ## Progress
-✅ Week 01 | Programming Language       
 
-✅ Week 02 | Application Life Cycle  
 
-✅ Week 03 | Networking  
+[x] Week 01 | Programming Language       
 
-✅ Week 04 | MVC  
+[x] Week 02 | Application Life Cycle  
 
-✅ Week 05 | Core Data and Realm  
+[x] Week 03 | Networking  
 
-⏺ Week 06 | Debugging  
+[x] Week 04 | MVC  
 
-⏺ Week 07 | MVP  
+[x] Week 05 | Core Data and Realm  
 
-⏺ Week 08 | Testing  
+[  ] Week 06 | Debugging  
 
-⏺ Week 09 | Localization  
+[  ] Week 07 | MVP  
 
-⏺ Week 10 | Design Patterns  
+[  ] Week 08 | Testing  
 
-⏺ Week 11 | App Store  
+[  ] Week 09 | Localization  
 
-⏺ Week 12 | Graduation 
+[  ] Week 10 | Design Patterns  
+
+[  ] Week 11 | App Store  
+
+[  ] Week 12 | Graduation 
+
 
 
 ##
