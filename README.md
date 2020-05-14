@@ -1,4 +1,4 @@
-# SwiftyCamp iOS Bootcamp
+# SwiftyCamp - iOS Bootcamp
 This is SwiftyCamp iOS Bootcamp, SwiftyCamp's 12 Weeks Bootcamp to become a Junior iOS Developer.
 
 ## Progress
